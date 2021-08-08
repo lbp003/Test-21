@@ -4,31 +4,93 @@
   <meta charset="utf-8">
   <title>CrossKnowledge - Code challenge</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> 
+  <style>
+    .block {
+      padding: 20px;
+      font-family: 'Roboto';
+      display: block;
+      font-size: 14px;
+    }
+
+    .article {
+      background-color: #f7f7f7;
+      width: 300px;
+    }
+
+    .header {
+      padding: 3%;
+      margin-bottom: 10px;
+      height: 30px;
+    }
+
+    .header_right {
+      float: right;
+      margin-top: 10px;
+    }
+
+    .header_left {
+      float: left;
+    }
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .icon {
+      display: inline-block;
+      vertical-align: text-bottom;
+      height: 20px;
+    }
+
+    .cover_img {
+      width: 300px;
+    }
+
+    .button {
+      position: absolute;
+      top: 465px;
+      left: 80px;
+      text-decoration: none;
+      font-size: 16px;
+      z-index: 2;
+      border-radius: 20px; 
+      padding: 8px 50px 8px 50px;
+      background-color: #f7f7f7;
+      color: black;
+      opacity: 0.7;
+    }
+
+    .footer {
+      padding-bottom: 10px;
+    }
+
+  </style>
 </head>
-<body>
-  <article>
-    <header>
-      <div>
-        <div>
+<body class="block">
+  <article class="article">
+    <header class="header">
+      <div class="header_left">
+        <div class="title">
           Avengers: Infinity War
         </div>
         <div>
           156 minutes
         </div>
       </div>
-      <div>
-        85% <img src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/global/cf-lg.3c29eff04f2.png" alt="">
+      <div class="header_right">
+        85% <img class="icon" src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/global/cf-lg.3c29eff04f2.png" alt="">
       </div>
     </header>
 
-    <div>
-      <img src="https://i.ibb.co/9tLcR7s/avengers.jpg">
-      <a href="https://www.rottentomatoes.com/m/avengers_infinity_war" target="_blank">
+    <div class="cover">
+      <img class="cover_img" src="https://i.ibb.co/9tLcR7s/avengers.jpg">
+      <a class="button" href="https://www.rottentomatoes.com/m/avengers_infinity_war" target="_blank">
         Check review
       </a>
     </div>
 
-    <footer>
+    <footer class="footer">
       <p>
         An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' "Avengers: Infinity War" brings to the screen the ultimate, deadliest showdown of all time. The Avengers and their Super Hero allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe. 
       </p>
