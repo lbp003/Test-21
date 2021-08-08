@@ -10,18 +10,41 @@
     (() => {
       const MS_PER_MINUTE = 60000
       const NOW = new Date()
-      let minutes = [0, 1, 30, 60, 6 * 60, 23 * 60, 24 * 60]
+      let minutes = [1/60, 1, 30, 60, 6 * 60, 23 * 60, 0]
       let dates = []
 
       minutes.forEach((i) => dates.push(new Date(NOW - i * MS_PER_MINUTE)))
 
-      dates.forEach((item) => {
+      dates.forEach((item, index) => {
         let el = document.createElement("div")
         el.innerHTML = "Started "
 
         let dt = document.createElement('span')
         dt.className = 'js-date-format'
-        dt.innerHTML = item.toISOString()
+        switch (index) {
+          case 0:
+              dt.innerHTML = '1 seconds ago = '+item.toISOString()
+            break;
+          case 1:
+              dt.innerHTML = '1 minutes ago = '+item.toISOString()
+            break;
+          case 2:
+              dt.innerHTML = '30 minutes ago = '+item.toISOString()
+            break;
+          case 3:
+              dt.innerHTML = '1 hour ago = '+item.toISOString()
+            break;
+          case 4:
+              dt.innerHTML = '6 hour ago = '+item.toISOString()
+            break;
+          case 5:
+              dt.innerHTML = '23 hour ago = '+item.toISOString()
+            break;
+          default:
+              dt.innerHTML = item.toISOString()
+            break;
+        }
+
         el.appendChild(dt)
         document.body.appendChild(el)
       })
